@@ -163,6 +163,9 @@
                                             <constraint firstAttribute="height" constant="30" id="QHc-ku-cCW"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="jsS-0i-k7a" eventType="touchUpInside" id="Or3-YN-GFa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="920-yc-Gdc">
                                         <rect key="frame" x="93" y="27" width="188" height="27"/>
@@ -413,7 +416,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="hMN-ZI-izO" id="Fah-eu-s9r"/>
+                        <outlet property="currentEvoImg" destination="9dM-YM-fQS" id="7eF-Uq-KEo"/>
+                        <outlet property="defenseLbl" destination="R6s-km-KnJ" id="NUs-4R-3VL"/>
+                        <outlet property="descriptionLbl" destination="hKy-Bi-oHf" id="1B2-RA-XtL"/>
+                        <outlet property="evoLbl" destination="1Sv-eg-iuf" id="UN4-4I-RLS"/>
+                        <outlet property="heightLbl" destination="eEQ-kI-bSK" id="38I-r9-2ep"/>
+                        <outlet property="mainImg" destination="4TH-RK-bK7" id="J8z-K1-m4a"/>
                         <outlet property="nameLbl" destination="920-yc-Gdc" id="B5f-Lp-qK6"/>
+                        <outlet property="nextEvoImg" destination="f51-8i-bRj" id="obu-8o-rYa"/>
+                        <outlet property="pokedexLbl" destination="bWU-Sz-fOV" id="A9Q-81-euO"/>
+                        <outlet property="typeLbl" destination="P7N-Pq-LWw" id="uDQ-Xc-9rt"/>
+                        <outlet property="weightLbl" destination="tML-fy-JtA" id="vCo-sk-XcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA4-vL-8ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
