@@ -33,6 +33,23 @@ class PokemonDetailVC: UIViewController {
         
         nameLbl.text = pokemon.name
         
+        pokemon.downloadPokemonDetails {
+            
+           
+            //Only be called after the network call is complete!
+            self.updateUI()
+        }
+        
+    }
+    
+    func updateUI(){
+        
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.heigth
+        weightLbl.text = pokemon.weight
+        
+        
     }
 
 
