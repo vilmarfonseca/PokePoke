@@ -36,16 +36,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7w-SL-VMe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO8-fx-kwV">
-                                        <rect key="frame" x="128" y="18" width="118" height="39"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="118" id="NxO-ck-dog"/>
-                                            <constraint firstAttribute="height" constant="39" id="bWU-N8-fSO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJt-Se-sSg">
                                         <rect key="frame" x="339" y="32" width="28" height="25"/>
                                         <constraints>
@@ -57,14 +47,22 @@
                                             <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WB-TO-ctj"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO8-fx-kwV">
+                                        <rect key="frame" x="128" y="25" width="118" height="39"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="4K4-nT-2ag"/>
-                                    <constraint firstAttribute="bottom" secondItem="mO8-fx-kwV" secondAttribute="bottom" constant="8" id="82Q-he-ek4"/>
+                                    <constraint firstItem="mO8-fx-kwV" firstAttribute="top" secondItem="w7w-SL-VMe" secondAttribute="top" constant="25" id="Fbi-15-VDe"/>
                                     <constraint firstAttribute="trailing" secondItem="xJt-Se-sSg" secondAttribute="trailing" constant="8" id="NLl-si-JQM"/>
                                     <constraint firstAttribute="bottom" secondItem="xJt-Se-sSg" secondAttribute="bottom" constant="8" id="PpA-FI-v4o"/>
-                                    <constraint firstItem="mO8-fx-kwV" firstAttribute="centerX" secondItem="w7w-SL-VMe" secondAttribute="centerX" id="xGh-hH-MJg"/>
+                                    <constraint firstItem="xJt-Se-sSg" firstAttribute="leading" secondItem="mO8-fx-kwV" secondAttribute="trailing" constant="93" id="irg-tl-Cle"/>
+                                    <constraint firstItem="mO8-fx-kwV" firstAttribute="leading" secondItem="w7w-SL-VMe" secondAttribute="leading" constant="128" id="qcy-Kx-b6e"/>
+                                    <constraint firstAttribute="bottom" secondItem="mO8-fx-kwV" secondAttribute="bottom" constant="1" id="wbR-RP-iEV"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jx7-MA-zDd">
