@@ -137,26 +137,54 @@ class Pokemon{
                     self._defense = "\(defense)"
                 }
                 
-                print(self._weight)
-                print(self._height)
-                print(self._attack)
-                print(self._defense)
                 
                 if let types = dict["types"] as? [Dictionary<String, String>], types.count > 0{
                     
                     if let name = types[0]["name"] {
-                        self._type = name.capitalized
+                        let newStrg = name.replacingOccurrences(of: "flying",with: "voador")
+                        let newStrg2 = newStrg.replacingOccurrences(of: "bug", with: "inseto")
+                        let newStrg3 = newStrg2.replacingOccurrences(of: "grass", with: "planta")
+                        let newStrg4 = newStrg3.replacingOccurrences(of: "dark", with: "escuro")
+                        let newStrg5 = newStrg4.replacingOccurrences(of: "dragon", with: "dragão")
+                        let newStrg6 = newStrg5.replacingOccurrences(of: "ice", with: "gelo")
+                        let newStrg7 = newStrg6.replacingOccurrences(of: "electric", with: "elétrico")
+                        let newStrg8 = newStrg7.replacingOccurrences(of: "fairy", with: "fada")
+                        let newStrg9 = newStrg8.replacingOccurrences(of: "poison", with: "venenoso")
+                        let newStrg10 = newStrg9.replacingOccurrences(of: "figthing", with: "lutador")
+                        let newStrg11 = newStrg10.replacingOccurrences(of: "psychic", with: "psíquico")
+                        let newStrg12 = newStrg11.replacingOccurrences(of: "fire", with: "fogo")
+                        let newStrg13 = newStrg12.replacingOccurrences(of: "rock", with: "pedra")
+                        let newStrg14 = newStrg13.replacingOccurrences(of: "steel", with: "metálico")
+                        let newStrg15 = newStrg14.replacingOccurrences(of: "ghost", with: "fantasma")
+                        let newStrg16 = newStrg15.replacingOccurrences(of: "water", with: "água")
+                        let newStrg17 = newStrg16.replacingOccurrences(of: "ground", with: "terra")
+                        self._type = newStrg17.capitalized
                     }
                     
                     if types.count > 1 {
                         for x in 1..<types.count {
                             if let name = types[x]["name"] {
-                                self._type! += "/\(name.capitalized)"
+                                let newStrg = name.replacingOccurrences(of: "flying",with: "voador")
+                                let newStrg2 = newStrg.replacingOccurrences(of: "bug", with: "inseto")
+                                let newStrg3 = newStrg2.replacingOccurrences(of: "grass", with: "planta")
+                                let newStrg4 = newStrg3.replacingOccurrences(of: "dark", with: "escuro")
+                                let newStrg5 = newStrg4.replacingOccurrences(of: "dragon", with: "dragão")
+                                let newStrg6 = newStrg5.replacingOccurrences(of: "ice", with: "gelo")
+                                let newStrg7 = newStrg6.replacingOccurrences(of: "electric", with: "elétrico")
+                                let newStrg8 = newStrg7.replacingOccurrences(of: "fairy", with: "fada")
+                                let newStrg9 = newStrg8.replacingOccurrences(of: "poison", with: "venenoso")
+                                let newStrg10 = newStrg9.replacingOccurrences(of: "figthing", with: "lutador")
+                                let newStrg11 = newStrg10.replacingOccurrences(of: "psychic", with: "psíquico")
+                                let newStrg12 = newStrg11.replacingOccurrences(of: "fire", with: "fogo")
+                                let newStrg13 = newStrg12.replacingOccurrences(of: "rock", with: "pedra")
+                                let newStrg14 = newStrg13.replacingOccurrences(of: "steel", with: "metálico")
+                                let newStrg15 = newStrg14.replacingOccurrences(of: "ghost", with: "fantasma")
+                                let newStrg16 = newStrg15.replacingOccurrences(of: "water", with: "água")
+                                let newStrg17 = newStrg16.replacingOccurrences(of: "ground", with: "terra")
+                                self._type! += "/\(newStrg17.capitalized)"
                             }
                         }
                     }
-                    
-                    print(self._type)
                     
                 } else {
                     self._type = ""
@@ -170,7 +198,7 @@ class Pokemon{
                                 if let description = descDict["description"] as? String {
                                     let newDescription = description.replacingOccurrences(of: "POKMON", with: "Pokemon")
                                     self._description = newDescription
-                                    print(newDescription)
+                                    //print(newDescription)
                                 }
                             }
                             complete()
@@ -200,13 +228,8 @@ class Pokemon{
                         
                     }
                 }
-                //print(self._nextEvolutionLevel)
-                //print(self._nextEvolutionName)
-                //print(self._nextEvolutionId)
             }
-            
             complete()
-            
         }
     }
     

@@ -40,8 +40,6 @@ class PokemonDetailVC: UIViewController {
         pokedexLbl.text = "\(pokemon.pokedexId)"
         
         pokemon.downloadPokemonDetails {
-            
-           
             //Only be called after the network call is complete!
             self.updateUI()
         }
@@ -52,8 +50,8 @@ class PokemonDetailVC: UIViewController {
         
         attackLbl.text = pokemon.attack
         defenseLbl.text = pokemon.defense
-        heightLbl.text = pokemon.heigth
-        weightLbl.text = pokemon.weight
+        heightLbl.text = "\(pokemon.heigth).0 m"
+        weightLbl.text = "\(pokemon.weight).0 Kg"
         typeLbl.text = pokemon.type
         descriptionLbl.text = pokemon.description
         
